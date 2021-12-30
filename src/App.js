@@ -38,8 +38,7 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(choiceOne);
-    console.log(choiceTwo);
+
     if (choiceOne && choiceTwo) {
       if (choiceOne.src === choiceTwo.src) {
         console.log("cards matched");
@@ -58,8 +57,8 @@ function App() {
         setTimeout(() => resetTurn(), 500);
       }
     }
-  }, [choiceOne, choiceTwo]);
-  console.log(cards);
+  }, [choiceOne, choiceTwo,cards]);
+
 
   //reset choices and increase turn
   const resetTurn = () => {
